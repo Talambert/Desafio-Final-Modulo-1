@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "datalake" {
+resource "aws_s3_bucket" "dldesafio" {
   #parametros de configuração dos recurso escolhido
   bucket = "${var.base_bucket_name}-${var.ambiente}-${var.numero_conta}"
   acl    = "private"
