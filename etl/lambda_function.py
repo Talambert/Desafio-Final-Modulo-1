@@ -33,7 +33,7 @@ def handler(event, context):
                     'Ec2KeyName': 'tancredo-igti-teste',
                     'KeepJobFlowAliveWhenNoSteps': True,
                     'TerminationProtected': False,
-                    'Ec2SubnetId': 'subnet-1df20360'
+                    'Ec2SubnetId': 'subnet-289a0f43'
                 },
 
                 Applications=[
@@ -93,7 +93,7 @@ def handler(event, context):
                                  '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog', 
                                  '--master', 'yarn',
                                  '--deploy-mode', 'cluster',
-                                 's3://datalake-tancredo-df1-edc-producao-421168935276/emr-code/pyspark/upload.py'
+                                 's3://datalake-tancredo-dfinal1-edc-producao-421168935276/emr-code/pyspark/upload.py'
                                  ]
                     }
                 },
@@ -108,7 +108,7 @@ def handler(event, context):
                                  '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog', 
                                  '--master', 'yarn',
                                  '--deploy-mode', 'cluster',
-                                 's3://datalake-tancredo-df1-edc-producao-421168935276/emr-code/pyspark/job_spark_etl1.py'
+                                 's3://datalake-tancredo-dfinal1-edc-producao-421168935276/emr-code/pyspark/job_spark_etl1.py'
                                  ]
                     }
                 }],
