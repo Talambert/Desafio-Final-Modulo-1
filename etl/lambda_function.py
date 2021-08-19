@@ -11,7 +11,7 @@ def handler(event, context):
                 ServiceRole='EMR_DefaultRole',
                 JobFlowRole='EMR_EC2_DefaultRole',
                 VisibleToAllUsers=True,
-                LogUri='s3://datalake-tancredo-df1-edc-producao-421168935276/emr-logs',
+                LogUri='s3://datalake-tancredo-dfinal1-edc-producao-421168935276/emr-logs',
                 ReleaseLabel='emr-6.3.0',
                 Instances={
                     'InstanceGroups': [
