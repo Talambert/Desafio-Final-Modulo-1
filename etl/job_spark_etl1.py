@@ -14,7 +14,7 @@ enem = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", "|")
-    .load("s3://datalake-tancredo-df1-edc-421168935276/raw-data/")
+    .load("s3://datalake-tancredo-df1-edc-producao-421168935276/raw-data/")
 )
 
 
@@ -25,5 +25,5 @@ enem = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("NU_ANO_CENSO")
-    .save("s3://datalake-tancredo-df1-edc-421168935276/staging-zone/")
+    .save("s3://datalake-tancredo-df1-edc-producao-421168935276/staging-zone/")
 )

@@ -1,5 +1,5 @@
 variable "base_bucket_name" {
-  default = "datalake-tancredo-df1-edc-421168935276"
+  default = "datalake-tancredo-df1-edc"
 }
 
 variable "ambiente" {
@@ -16,6 +16,6 @@ variable "aws_region" {
 
 
 variable "lambda_function_name" {
-  default = "IGTIexecutaEMR"
+  default = "IGTIexecutaEMRDesafio1"
 }
 
