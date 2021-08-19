@@ -14,4 +14,4 @@ resource "aws_s3_bucket_object" "job_spark_etl1" {
   etag   = filemd5("../etl/job_spark_etl1.py")
 }
 
- 
+  
