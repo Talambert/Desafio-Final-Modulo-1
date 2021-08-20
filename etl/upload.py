@@ -1,48 +1,14 @@
 import boto3
-import pandas as pd
 
-#Criar um cliente para interagir com o QWS S3
+# Criar um cliente para interagir com o AWS S3
 s3_client = boto3.client('s3')
 
-s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\matricula_co.CSV",
-                    "datalake-tancredo-dfinal1-edc-producao-421168935276",
-                    "raw-data/matricula_co.CSV"
-                    )
-s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\matricula_nordeste.CSV",
-                    "datalake-tancredo-dfinal1-edc-producao-421168935276",
-                    "raw-data/matricula_nordeste.CSV"
-                    )
+files = ['matricula_co.CSV','matricula_nordeste.CSV','matricula_norte.CSV','matricula_sudeste.CSV','matricula_sul.CSV']
 
-s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\matricula_norte.CSV",
-                    "datalake-tancredo-dfinal1-edc-producao-421168935276",
-                    "raw-data/matricula_norte.CSV"
-                    )
-
-s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\matricula_sudeste.CSV",
-                    "datalake-tancredo-dfinal1-edc-producao-421168935276",
-                    "raw-data/matricula_sudeste.CSV"
-                    )
-
-s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\matricula_sul.CSV",
-                    "datalake-tancredo-dfinal1-edc-producao-421168935276",
-                    "raw-data/matricula_sul.CSV"
-                    )
-
-
-
-                    
-
-
-
-
-
-
-
-##df = pd.read_csv("..\dados\microdados_educacao_basica_2020\DADOS\gestor.csv", sep="|")
-##print(df)
-
-
-##s3_client.upload_file("..\dados\microdados_educacao_basica_2020\DADOS\*.txt",
-  ##                  "datalake-tancredo-igti-edc",
-    ##                "data/gestor.csv"
-      ##              )
+try:
+    for fl in files:
+        s3_client.upload_file("../dados/microdados_educacao_basica_2020/DADOS/"+fl,
+                              "datalake-tancredo-dfinal1-edc-producao-421168935276",
+                              "raw-data/"+fl)
+except NameError:
+    print(NameError)
